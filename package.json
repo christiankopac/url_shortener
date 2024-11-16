@@ -5,7 +5,10 @@
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/bun": "1.1.13",
+    "aws-sdk": "^2.1692.0",
     "drizzle-kit": "^0.28.1",
+    "mock-aws-s3": "^4.0.2",
+    "nock": "^13.5.6",
     "tsx": "^4.19.2"
   },
   "peerDependencies": {
@@ -20,6 +23,7 @@
   },
   "scripts": {
     "dev": "bun --env-file=.env run src/index.ts",
-    "start": "bun --env-file=.env run src/index.ts"
+    "start": "bun --env-file=.env run src/index.ts",
+    "build": "bun build src/index.ts --outdir dist --target bun"
   }
 }
